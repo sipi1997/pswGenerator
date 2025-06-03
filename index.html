@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Generate a <br/><span class="green">Random Password</span></h1>
+        <div class="display">
+            <input type="text" id="psw" placeholder="Password">
+            <img onclick="copyPsw()" src="icons/copy.svg" alt="Copy Icon" width="30">
+        </div>
+        <button onclick="pswGenerator()" id="generate"><img src="icons/bolt.svg" alt="Generate Icon" width="30"> Generate Password</button>
+    </div>
+    
+
+    <script>
+
+        const pswBox = document.getElementById('psw');
+        const lenght = 12;
+
+        const upperCase = "ABCDEFGHIJKLMNOPQRSTUVZ";
+        const lowerCase = "abcdefghijklmnopqrstuvz";
+        const number = "0123456789";
+        const symbols = "|!£$%&/()=?^*°ç§-_><";
+
+
+        const allChar = upperCase + lowerCase + number + symbols;
+
+        function pswGenerator() {
+            let psw = '';
+
+            //Ci restituisce i primi quattro caratteri con tipi tutti diversi
+
+            psw += upperCase[Math.floor(Math.random() * upperCase.length)];
+            psw += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+            psw += number[Math.floor(Math.random() * number.length)];
+            psw += symbols[Math.floor(Math.random() * symbols.length)];
+
+           /* Il ciclo completa la psw con tutti i caratteri disposti in maniera randomica,
+            Per questioni di sicurezza, è più indicato averli entrambi, ma potrebbe
+            funzionare anche con un solo ciclo */
+          
+            while(lenght > psw.length) {
+                psw += allChar[Math.floor(Math.random() * allChar.length)];
+            }
+             
+            
+
+            pswBox.value = psw;            
+        }
+
+        function copyPsw() {
+            pswBox.select();
+            document.execCommand('copy');
+        }
+
+
+    </script>
+
+</body>
+</html>

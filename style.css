@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f004d;
+}
+
+/* #23e1a8 icone*/
+
+.container {
+    width: 80%;
+    margin: 14% auto;
+}
+
+h1 {
+    color: white;
+}
+
+.green {
+    color: #23e1a8;
+    border-bottom: 2px solid #23e1a8;
+}
+
+.display {
+    background-color: #fff;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 16px 0px 22px 0px;
+}
+
+.display input {
+    padding: 10px 30px; 
+    border: none;
+}
+
+.display input:focus {
+    outline: none;
+}
+
+.container button{
+    background-color: #2bc597;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+tracciare un percorso da A a B con maps senza apikey 
+
+condividere la mappa con un percorso senza apikey senza profilo
