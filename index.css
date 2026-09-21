@@ -1,0 +1,113 @@
+:root{
+    --green-color: #10B981;
+    --light-green-color: #55F991;
+}
+
+body {
+    color:#fff;
+    margin: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color:#1F2937;
+}
+
+h1{
+    font-size:40px;
+    line-height: 40px;
+    letter-spacing: -2.5%;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+p {
+    font-size:20px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+
+button{
+    color:#fff;
+    background-color: var(--green-color);;
+    border: 0;
+    margin-right: 20px;
+}
+
+button.active {background-color: var(--light-green-color); color: #000;}
+
+button, .psw-field{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+hr{
+    margin: 20px 0;
+    border: 1px solid #2F3E53;
+}
+
+.container{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.psw-field{
+    display: none;
+    position: relative;
+    min-width: 400px;
+    margin-right: 20px;
+    color: var(--light-green-color);
+    background-color: #273549;
+}
+
+input {
+    background-color: #273549;
+    border: 0;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.copied::after{
+    content: "Copied!";
+    background-color: var(--green-color);
+    color: #fff;
+    border-radius: 6px;
+    width: fit-content;
+    padding: 8px;
+    position: absolute;
+    bottom: -50px;
+    opacity: 1;
+    left: 41%;
+    animation: bounce 1s ease-in-out;
+    /* transition: all .3s; */
+}
+@keyframes bounce {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    20%{
+        bottom: -80px;
+        opacity: .5;
+    }
+
+    70%{
+        bottom: -30px;
+        opacity: .5;
+    }
+
+    100%{
+        bottom: -50px;
+        opacity: 1;
+    }
+    
+}
+
+.green{
+    color: var(--green-color);
+}
